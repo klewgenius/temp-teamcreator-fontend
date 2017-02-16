@@ -1,0 +1,18 @@
+
+<md-card class="field-background">
+  <md-card-title-group>
+    <img md-card-sm-image src="assets/soccer-player.png">
+    <md-card-title>
+      <md-input placeholder="New Player" align="start"  ></md-input>
+    </md-card-title>
+    <md-card-subtitle>
+      <md-slider
+        #userRating
+        [max]="max"
+        [min]="min"
+        [value]="value" >
+      </md-slider>
+      {{userRating.value}}
+    </md-card-subtitle>
+  </md-card-title-group>
+</md-card>

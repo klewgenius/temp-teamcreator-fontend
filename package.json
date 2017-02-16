@@ -5,10 +5,13 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "localstart": "ng serve",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "preinstall":   "npm install -g http-server",
+    "postinstall":  "ng build --prod",
+    "start":        "http-server dist/"
   },
   "private": true,
   "dependencies": {

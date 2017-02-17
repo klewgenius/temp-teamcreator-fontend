@@ -3,16 +3,32 @@
   <md-card-title-group>
     <img md-card-sm-image src="assets/soccer-player.png">
     <md-card-title>
-      <md-input placeholder="New Player" align="start"  ></md-input>
+
+      <md-input placeholder="New Player" align="start"
+                [(ngModel)]="player"></md-input>
     </md-card-title>
     <md-card-subtitle>
       <md-slider
         #userRating
         [max]="max"
         [min]="min"
-        [value]="value" >
+        [(ngModel)]="score" >
       </md-slider>
-      {{userRating.value}}
+      {{score}}
+
+      <br>
+
+      <input type="button" (click)="addPlayer()" value="Add"/>
+
     </md-card-subtitle>
   </md-card-title-group>
 </md-card>
+
+<md-list>
+  <h3 md-subheader>All Players</h3>
+  <md-list-item *ngFor="let p of players">
+    <h4 md-line>{{p.name}}</h4>
+    <p md-line class="demo-2">{{p.score}}</p>
+  </md-list-item>
+  
+</md-list>

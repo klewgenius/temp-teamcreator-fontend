@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TeamCreator } from 'team-creator';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  max = 100;
+  max = 5;
   min = 0;
   score= 0;
   player = "";
   players = [];
+  teams = {};
 
   addPlayer(){
 
@@ -21,12 +23,18 @@ export class AppComponent {
     });
     this.player = "";
     this.score = 0;
+
+  }
+
+  calc(){
+    TeamCreator.setPlayers(this.players);
+    this.teams = TeamCreator.createTeams();
+
+    console.log(this.teams);
   }
 
   remove($event){
-
     alert($event);
     console.log($event);
-
   }
 }

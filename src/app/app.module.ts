@@ -11,7 +11,6 @@ import { AppComponent } from './app.component';
 
 import 'hammerjs';
 
-
 @NgModule({
   declarations: [
     AppComponent
@@ -29,4 +28,6 @@ import 'hammerjs';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

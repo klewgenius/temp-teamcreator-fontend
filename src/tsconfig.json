@@ -1,5 +1,4 @@
 {
-
   "compilerOptions": {
     "types": [
       "../node_modules/hammerjs"

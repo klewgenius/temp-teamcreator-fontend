@@ -19,7 +19,7 @@
       <br>
 
       <input type="button" (click)="addPlayer()" value="Add"/>
-      <input type="button" (click)="calc()" value="ConsoleLog teams"/>
+      <input type="button" (click)="calc()" value="Create Teams"/>
 
     </md-card-subtitle>
   </md-card-title-group>
@@ -28,6 +28,24 @@
 <md-list>
   <h3 md-subheader>All Players</h3>
   <md-list-item *ngFor="let p of players">
+    <h4 md-line>{{p.name}}</h4>
+    <p md-line class="demo-2">{{p.score}}</p>
+  </md-list-item>
+
+</md-list>
+
+<md-list>
+  <h3 md-subheader>TEAM A</h3>
+  <md-list-item *ngFor="let p of teams.teamA">
+    <h4 md-line>{{p.name}}</h4>
+    <p md-line class="demo-2">{{p.score}}</p>
+  </md-list-item>
+
+</md-list>
+
+<md-list>
+  <h3 md-subheader>TEAM B</h3>
+  <md-list-item *ngFor="let p of teams.teamB">
     <h4 md-line>{{p.name}}</h4>
     <p md-line class="demo-2">{{p.score}}</p>
   </md-list-item>
